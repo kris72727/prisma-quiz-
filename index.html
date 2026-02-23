@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Prisma X Intelligence Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="overlay"></div>
+
+<img src="logo.png" class="logo">
+
+<audio id="bg-music" loop preload="auto">
+  <source src="bg-music.mp3" type="audio/mpeg">
+</audio>
+
+<div id="welcome-screen" class="screen fade-in">
+  <h1 class="title">Prisma X Teleoperation Intelligence Quiz</h1>
+  <button id="startBtn" class="glow-btn">Start Quiz</button>
+</div>
+
+<div id="quiz-screen" class="screen hidden fade-in">
+  <div class="quiz-box glass">
+
+    <div class="progress-container">
+      <div id="progress-bar"></div>
+    </div>
+
+    <div id="timer">Time: 15</div>
+
+    <h2 id="question-number"></h2>
+    <h3 id="question"></h3>
+    <div id="answers"></div>
+
+    <div class="controls">
+      <button onclick="prevQuestion()" class="glow-btn">⬅</button>
+      <button onclick="nextQuestion()" class="glow-btn">➡</button>
+      <button onclick="resetQuiz()" class="glow-btn">Reset</button>
+    </div>
+
+  </div>
+</div>
+
+<div id="result-screen" class="screen hidden fade-in">
+  <h2>Your Score: <span id="final-score"></span>/15</h2>
+  <p id="grade"></p>
+  <button onclick="restart()" class="glow-btn">Restart</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
